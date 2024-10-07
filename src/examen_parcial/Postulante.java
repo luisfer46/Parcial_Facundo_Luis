@@ -26,4 +26,7 @@ public class Postulante {
     public ArrayList<Postulacion> getPostulaciones() {
         return postulaciones;
     }
+    public String getDNI() {
+        return DNI;
+    }
 }

@@ -36,4 +36,7 @@ public class Cliente {
     public String getNombre() {
         return nombre;
     }
+    public String getRUC() {
+        return RUC;
+    }
 }

@@ -1,14 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package examen_parcial;
+import java.util.ArrayList;
 
-/**
- *
- * @author Luis Fernando
- */
 public class ArregloGradoEstudio {
-    
+    private ArrayList<GradoEstudio> grados;
+
+    public ArregloGradoEstudio() {
+        grados = new ArrayList<>();
+    }
+
+    public boolean agregar(GradoEstudio grado) {
+        return grados.add(grado);
+    }
+
+    public GradoEstudio buscar(String description) {
+        for (GradoEstudio grado : grados) {
+            if (grado.getDescription().equals(description)) {
+                return grado;
+            }
+        }
+        return null;
+    }
 }

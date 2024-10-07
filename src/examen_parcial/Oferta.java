@@ -1,3 +1,5 @@
+package examen_parcial;
+
 import java.util.ArrayList;
 
 public class Oferta {
@@ -17,12 +19,23 @@ public class Oferta {
         this.requisitos = new ArrayList<>();
     }
 
+    // Agregar requisito a la oferta
     public void agregarRequisito(int orden, String descripcion) {
-        requisitos.add(new Requisito(orden, descripcion));
+        Requisito requisito = new Requisito(orden, descripcion);
+        requisitos.add(requisito);
     }
 
+    // Eliminar requisito por su orden
     public void eliminarRequisito(int orden) {
         requisitos.removeIf(r -> r.getOrden() == orden);
+    }
+
+    public String getPuesto() {
+        return puesto;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
     }
 
     public ArrayList<Requisito> getRequisitos() {

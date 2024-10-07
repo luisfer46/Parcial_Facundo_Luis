@@ -1,3 +1,5 @@
+package examen_parcial;
+
 public class Requisito {
     private int orden;
     private String descripcion;
@@ -6,7 +8,7 @@ public class Requisito {
     public Requisito(int orden, String descripcion) {
         this.orden = orden;
         this.descripcion = descripcion;
-        this.estado = true; // Habilitado por defecto
+        this.estado = true; // habilitado por defecto
     }
 
     public void habilitar() {

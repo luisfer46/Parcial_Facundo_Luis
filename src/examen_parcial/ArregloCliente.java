@@ -5,28 +5,27 @@ import java.util.ArrayList;
 public class ArregloCliente {
     private ArrayList<Cliente> clientes;
 
-    // Constructor
     public ArregloCliente() {
         clientes = new ArrayList<>();
     }
 
-    // Método para agregar un cliente al arreglo
+    // Método para agregar un cliente
     public boolean agregar(String RUC, String nombre, String email, String telefono, String clave) {
         Cliente cliente = new Cliente(RUC, nombre, email, telefono, clave);
         return clientes.add(cliente);
     }
 
-    // Método para buscar un cliente por su RUC
+    // Método para buscar un cliente por RUC
     public Cliente buscar(String RUC) {
         for (Cliente cliente : clientes) {
             if (cliente.getRUC().equals(RUC)) {
                 return cliente;
             }
         }
-        return null; // Devuelve null si no encuentra al cliente
+        return null;
     }
 
-    // Método para buscar un cliente por su nombre (opcional)
+    // Método para buscar clientes por nombre (devolver arreglo)
     public Cliente[] buscarNombre(String nombre) {
         ArrayList<Cliente> encontrados = new ArrayList<>();
         for (Cliente cliente : clientes) {
@@ -37,7 +36,7 @@ public class ArregloCliente {
         return encontrados.toArray(new Cliente[0]);
     }
 
-    // Método para obtener todos los clientes (opcional)
+    // Método para obtener todos los clientes
     public ArrayList<Cliente> getClientes() {
         return clientes;
     }

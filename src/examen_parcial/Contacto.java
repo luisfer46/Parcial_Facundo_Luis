@@ -1,3 +1,5 @@
+package examen_parcial;
+
 public class Contacto {
     private String DNI;
     private String nombres;

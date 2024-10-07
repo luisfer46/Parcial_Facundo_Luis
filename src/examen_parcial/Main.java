@@ -1,14 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package examen_parcial;
-
-/**
- *
- * @author Luis Fernando
- */
 package examen_parcial;
 
 import java.util.Scanner;
@@ -30,11 +19,11 @@ public class Main {
             System.out.println("4. Mostrar Ofertas de un Cliente");
             System.out.println("5. Salir");
             System.out.print("Seleccione una opción: ");
-            
+
             
             opcion = input.nextInt();
             input.nextLine(); 
-            
+
             switch (opcion) {
                 case 1:
                     
@@ -51,7 +40,7 @@ public class Main {
                     arregloClientes.agregar(ruc, nombre, email, telefono, clave);
                     System.out.println("Cliente agregado exitosamente.");
                     break;
-                    
+
                 case 2:
                     
                     System.out.print("Ingrese el RUC del cliente a buscar: ");
@@ -63,7 +52,7 @@ public class Main {
                         System.out.println("Cliente no encontrado.");
                     }
                     break;
-                    
+
                 case 3:
                     
                     System.out.print("Ingrese el RUC del cliente: ");
@@ -87,9 +76,9 @@ public class Main {
                         System.out.println("Cliente no encontrado.");
                     }
                     break;
-                    
+
                 case 4:
-                    // Mostrar Ofertas de un Cliente
+                    
                     System.out.print("Ingrese el RUC del cliente: ");
                     ruc = input.nextLine();
                     cliente = arregloClientes.buscar(ruc);
@@ -102,18 +91,18 @@ public class Main {
                         System.out.println("Cliente no encontrado.");
                     }
                     break;
-                    
+
                 case 5:
-                    // Salir
+                   
                     System.out.println("Saliendo del programa...");
                     break;
-                    
+
                 default:
                     System.out.println("Opción no válida, intente nuevamente.");
                     break;
             }
         }
-        
+
         
         input.close();
     }

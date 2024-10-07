@@ -1,3 +1,5 @@
+package examen_parcial;
+
 import java.util.Date;
 
 public class Postulacion {
